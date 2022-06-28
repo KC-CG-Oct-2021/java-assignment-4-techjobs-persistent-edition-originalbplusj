@@ -32,7 +32,7 @@ public class SkillController {
     @PostMapping("add")
     public String processAddSkillForm(@ModelAttribute @Valid Skill newSkill, Errors errors, Model model) {
         if (errors.hasErrors()){
-            model.addAttribute(new Skill());
+            //model.addAttribute(new Skill());
             return "skills/add";
         }
         skillRepository.save(newSkill);
